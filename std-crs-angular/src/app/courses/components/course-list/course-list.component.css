@@ -1,0 +1,13 @@
+div{
+    text-align: center;
+    max-width:500px;
+	margin:150px auto;
+    background:rgb(206, 199, 199);
+    border-radius:20px;
+	padding:25px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h3{
+    text-align: center;
+}

@@ -1,0 +1,32 @@
+<div class = "form-group">
+    <h3>{{studentFormTitle}}</h3>
+    <form [formGroup]="studentForm" (cancel)="resetForm()" (ngSubmit)="onSubmit()">
+        
+        <label class="control-label">
+            Name: 
+            <input type="text" class = "form-control" formControlName="name" required>
+        </label>
+
+        <label class="control-label">
+            Email: 
+            <input type="email" class = "form-control" formControlName="email">
+        </label>
+
+        <label class="control-label">
+            Cell Phone: 
+            <input type='tel' class = "form-control" formControlName="cellPhone">
+        </label>
+
+        <label class="control-label">
+            Age: 
+            <input type='number' class = "form-control" formControlName="age">
+        </label>
+
+        <label class="control-label">
+            Address: 
+            <input type='text' class = "form-control" formControlName="address">
+        </label>
+        <br>&nbsp;
+        <button  class = "form-control" type="submit">Submit</button>
+    </form>
+</div>

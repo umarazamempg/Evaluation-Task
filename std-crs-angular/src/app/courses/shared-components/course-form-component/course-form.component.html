@@ -1,0 +1,43 @@
+<div class = "form-group">
+    <h3>{{courseFormTitle}}</h3>
+    <form [formGroup]="courseForm" (cancel)="resetForm()" (ngSubmit)="onSubmit()">
+        
+        <label class="control-label">
+            Course Name: 
+            <input type="text" class = "form-control" formControlName="name" required>
+        </label>
+
+        &nbsp;
+
+        <label class="control-label">
+            Field: 
+            <select
+                class="form-control"
+                (change)="onFieldChange()"
+                formControlName="field">
+                <option value="" disabled selected>Select Field</option>
+                <option *ngFor="let field of fieldTypes" [value]="field">
+                    {{field}}
+                </option>
+            </select>
+        </label>
+
+        &nbsp;
+
+        <label class="control-label">
+            Credit Hours: 
+            <input type='number' class = "form-control" formControlName="creditHrs">
+        </label>
+
+        &nbsp;
+        
+        <label class="control-label">
+            Lab: 
+            <input type='checkbox' formControlName="isLab">
+        </label>
+
+        <br>&nbsp;
+
+        <button  class = "form-control" type="submit">Submit</button>
+    </form>
+</div>

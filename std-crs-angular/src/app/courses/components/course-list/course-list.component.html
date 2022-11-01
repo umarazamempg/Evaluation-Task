@@ -1,0 +1,31 @@
+<div>
+    <h3>{{courseTableTitle}}</h3>
+    <table class ="table table-hover table-striped">
+        <thead class = "thead-dark">
+            <tr>
+                <th scope = "col">Name</th>
+                <th scope = "col">Field</th>
+                <th scope = "col">Credit Hours</th>
+                <th scope = "col">Lab</th>
+                <th scope = "col">No. Of Students</th>
+                <th scope = "col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let course of courseInformation">
+                <td>{{course.name}}</td>
+                <td>{{course.field}}</td>
+                <td>{{course.creditHrs}}</td>
+                <td>
+                <input type="checkbox" name="isLabCheckbox" value={{course.isLab}} readonly>
+                </td>
+                <td>{{course.numOfStudents}}</td>
+                <td>
+                    <button class="btn"><i class="fa fa-trash" (click)="onDeleteRow()"></i></button>
+                    <button class="btn"><i class="fa fa-pencil" (click)="onEditRow()"></i></button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
